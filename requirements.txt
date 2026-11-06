@@ -1,0 +1,24 @@
+# Runtime dependencies for the standalone model and its Mamba operator.
+# Target: Linux x86_64, Python 3.8.20, CUDA 11.8. Read INSTALL.md first.
+# Install the CUDA build of PyTorch and build tools before this file.
+-c constraints-cu118.txt
+
+# PyTorch must already be the cu118 build (see INSTALL.md).
+torch==2.2.2
+
+# Official v1.1.3 source commits. These exact un-suffixed releases are not on
+# PyPI; do not replace these URLs with plain PyPI ==1.1.3 requirements.
+causal-conv1d @ https://github.com/Dao-AILab/causal-conv1d/archive/21a3f010d01e1c25d7a407a7769e8952b5232417.tar.gz
+mamba-ssm @ https://github.com/state-spaces/mamba/archive/35689e19d2a0445f46b814b56d40491664b5da0a.tar.gz
+
+# Mamba runtime/import dependencies; they are not extra FSRH-Net models.
+einops==0.8.1
+triton==2.2.0
+transformers==4.46.3
+numpy==1.24.4
+packaging==24.2
+ninja==1.13.0
+
+# Also declared by causal-conv1d's official setup.py; resolved by pip rather
+# than pinned here. This is not a complete lock file.
+buildtools

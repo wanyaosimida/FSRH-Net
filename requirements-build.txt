@@ -1,0 +1,8 @@
+# Python build tools. Install before the CUDA extensions.
+# This file does not install the CUDA toolkit, nvcc, or a C++ compiler.
+-c constraints-cu118.txt
+pip==24.2
+setuptools==61.0.0
+wheel==0.44.0
+packaging==24.2
+ninja==1.13.0

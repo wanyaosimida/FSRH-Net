@@ -1,0 +1,45 @@
+FSRH-Net
+
+Project-specific contributions and modifications that the contributors have
+authority to license are provided under the Apache License, Version 2.0.
+See LICENSE for the license text. Third-party rights are not overridden.
+
+Third-party attribution
+-----------------------
+
+HRNet
+Copyright (c) Microsoft.
+The encoder retains the upstream MIT notice. See LICENSES/HRNet-MIT.txt.
+https://github.com/HRNet/HRNet-Semantic-Segmentation
+
+Mamba
+Copyright 2023 Tri Dao, Albert Gu.
+The state-space initialization has Mamba lineage; the native
+operator is also an external dependency. See LICENSES/Mamba-Apache-2.0.txt.
+https://github.com/state-spaces/mamba
+
+VMamba
+Copyright (c) 2024 MzeroMiko.
+The scan conventions have VMamba lineage.
+See LICENSES/VMamba-MIT.txt.
+https://github.com/MzeroMiko/VMamba
+
+MF-Mamba
+The convolutional utilities, inherited segmentation head and eight-direction
+scan conventions include adaptations of the official MF-Mamba implementation.
+https://github.com/Mango-Mars/MF-Mamba
+The upstream collaborator describes integration and extension use. A complete
+project-wide redistribution/relicensing grant was not identified; this NOTICE
+does not supply one. See THIRD_PARTY_NOTICES.md for the evidence and scope.
+
+Modification notice
+-------------------
+
+The source has been reorganized into the fsrhnet package to follow the
+FSRH-Net method components, with an explicit weight-loading interface and
+model-specific imports. Checkpoint loading translates supported parameter names.
+This is an adapted implementation, not an unmodified upstream distribution.
+
+These notices are informational and do not add restrictions to or expand the
+permissions of any applicable license. Third-party details and outstanding
+MF-Mamba source-rights clarification are recorded in THIRD_PARTY_NOTICES.md.
